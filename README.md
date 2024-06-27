@@ -6,5 +6,9 @@ docker build -t devops .
 ```
 
 ```bash
-docker build -t devops .
+docker run -d -p 3001:3000 devops
 ```
+
+![alt text](image.png)
+
+![alt text](image-1.png)
