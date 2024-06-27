@@ -1,15 +1,9 @@
-'use strict'
+const express = require('express')
 
-var express = require('../../');
+const app = express()
 
-var app = module.exports = express()
+app.get('/', (_, res) => res.send('<h1>express one page</h1>'))
 
-app.get('/', function(req, res){
-  res.send('Hello World');
-});
+const port = 8080
 
-/* istanbul ignore next */
-if (!module.parent) {
-  app.listen(3000);
-  console.log('Express started on port 3000');
-}
+const server = app.listen(port, () => console.log(`Server has been started on port ${port}`))
